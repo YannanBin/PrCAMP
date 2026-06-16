@@ -1,8 +1,8 @@
 from transformers import AutoModel
 from rdkit import RDLogger
 RDLogger.DisableLog('rdApp.warning')   # 忽略这个手性信息的警告
-from model_enconder_graph import GCNEncoder,GATEncoder,GINEncoder,GraphSAGEEncoder,DiffPoolEncoder
-from feature_fusion import GatedFusion,SelfAttentionFusion,CrossAttentionFusion
+from model_enconder_graph import GATEncoder
+from feature_fusion import CrossAttentionFusion
 import torch
 import torch.nn as nn
 
