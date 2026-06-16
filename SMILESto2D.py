@@ -31,12 +31,12 @@ for idx, row in df_all.iterrows():
         AllChem.Compute2DCoords(mol)
         Chem.MolToMolFile(mol, save_path)
 
-        print(f"✅ 成功生成: {mol_id}.mol", flush=True)
+        print(f"成功生成: {mol_id}.mol", flush=True)
         success += 1
 
     except Exception as e:
         print(f"[失败] ID={mol_id}, SMILES={smiles}, 错误: {str(e)}", flush=True)
         fail += 1
 
-print(f"\n✅ 成功保存 mol 文件: {success}")
-print(f"❌ 失败或跳过样本数: {fail}")
+print(f"\n成功保存 mol 文件: {success}")
+print(f"失败或跳过样本数: {fail}")
