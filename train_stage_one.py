@@ -32,7 +32,7 @@ torch.manual_seed(SEED)
 torch.cuda.manual_seed_all(SEED)
 
 # ================== 参数配置（保持原有） ==================
-MODEL_PATH = "./models/ChemBERTa"
+MODEL_PATH = "DeepChem/ChemBERTa-77M-MLM"
 DATA_PATH_POS = "AMP_SMILES40.csv"
 DATA_PATH_NEG = "non_AMP_SMILES40.csv"
 BATCH_SIZE = 32
