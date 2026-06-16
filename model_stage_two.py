@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 
 class AMPFunctionClassifier(nn.Module):
-    def __init__(self, pretrained_path="./models/ChemBERTa", num_labels=6):
+    def __init__(self, pretrained_path="DeepChem/ChemBERTa-77M-MLM", num_labels=6):
         super().__init__()
         self.bert_dim = 384
         self.gat_dim = 128
