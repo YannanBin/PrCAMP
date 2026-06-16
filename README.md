@@ -8,7 +8,7 @@ conda activate py38
 
 ## Training 
 
-The model relies on 2D Structure. To generate them in advance:
+The model relies on 2D Structures. To generate them in advance:
 
 ```
 python SMILESto2D.py
@@ -17,5 +17,6 @@ python SMILESto2D.py
 To train a model for prediction, you can run:
 
 ```
-python main.py
+python train_stage_one.py
+python train_stage_two.py
 ```
