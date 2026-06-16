@@ -9,7 +9,7 @@ from feature_fusion import GatedFusion, SelfAttentionFusion, CrossAttentionFusio
 
 # ========================== 一阶段二分类 ==========================
 class AMPBinaryClassifier(nn.Module):
-    def __init__(self, pretrained_path="./models/ChemBERTa"):
+    def __init__(self, pretrained_path="DeepChem/ChemBERTa-77M-MLM"):
         super().__init__()
 
         self.bert_dim = 384  # ChemBERTa hidden size
