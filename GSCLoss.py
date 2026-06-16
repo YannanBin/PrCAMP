@@ -1,39 +1,3 @@
-# # GSCLoss.py
-# import torch
-# import torch.nn as nn
-# import torch.nn.functional as F
-#
-# class GSCLoss(nn.Module):
-#     def __init__(self, temperature=0.1):
-#         super(GSCLoss, self).__init__()
-#         self.temperature = temperature
-#
-#     def forward(self, graph_embed, seq_embed):
-#         """
-#         graph_embed: (B, D)
-#         seq_embed:   (B, D)
-#         """
-#         # Normalize embeddings
-#         graph_embed = F.normalize(graph_embed, dim=1)
-#         seq_embed = F.normalize(seq_embed, dim=1)
-#
-#         # Positive similarity: diagonal of similarity matrix   可选拉近正样本
-#         # pos_sim = torch.sum(graph_embed * seq_embed, dim=1)  # (B,)
-#         # align_loss = 1 - pos_sim.mean()
-#
-#         # Compute similarity matrix: (B, B)
-#         sim_matrix = torch.matmul(graph_embed, seq_embed.T) / self.temperature
-#
-#         # Contrastive loss: InfoNCE
-#         labels = torch.arange(graph_embed.size(0)).to(graph_embed.device)
-#         loss_i = F.cross_entropy(sim_matrix, labels)
-#         loss_j = F.cross_entropy(sim_matrix.T, labels)
-#
-#         loss = (loss_i + loss_j) / 2
-#         # loss = loss + 0.1 * align_loss
-#
-#         return loss
-# GSCLoss.py
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
