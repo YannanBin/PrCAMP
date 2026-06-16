@@ -34,7 +34,7 @@ torch.manual_seed(SEED)
 torch.cuda.manual_seed_all(SEED)
 
 # ================== 参数配置（保持原有） ==================
-MODEL_PATH = "./models/ChemBERTa"
+MODEL_PATH = "DeepChem/ChemBERTa-77M-MLM"
 DATA_PATH = "new_cycpeptides.csv"
 BATCH_SIZE = 16
 EPOCHS = 100
